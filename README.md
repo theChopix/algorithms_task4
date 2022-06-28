@@ -24,3 +24,9 @@ The numbers of warriors in each village along the river are given, as well as th
 `3` <sub> maximal possible profit Mr. Henson can obtain by buying and then selling totems </sub>
 
 ## Solution
+
+#### Compiling and testing
+
+`g++ main.c -o main`  
+  
+`./main < datapub/pub**.in`
