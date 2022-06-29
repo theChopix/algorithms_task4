@@ -25,7 +25,19 @@ The numbers of warriors in each village along the river are given, as well as th
 
 ## Solution
 
-In order to obtain time complexity of the program as small as possible (which was the main goal of these tasks) it is needed to solve this problem as a task of dynamic programming. This task is kind of similar to optimization problem of [matrix chain multiplication](https://en.wikipedia.org/wiki/Matrix_chain_multiplication) (matrix chain ordering problem). It leads us to make the table of individual elements (villages and number of their warriors in this task) together with any possible combination of the elements (merger of villages). Based on this table, bearing information on possible gains in merging villages or keeping them separeted, we can decide which mergers we have to make to maximize the profit. 
+In order to obtain time complexity of the program as small as possible (which was the main goal of these tasks) it is needed to solve this problem as a task of dynamic programming. This task is kind of similar to optimization problem of [matrix chain multiplication](https://en.wikipedia.org/wiki/Matrix_chain_multiplication) (matrix chain ordering problem). It leads us to make the table of individual elements (villages and number of their warriors in this task) together with any possible combination of the elements (merger of villages). Based on this table, bearing information on possible gains in merging villages or keeping them separeted, we can decide which mergers we have to make to maximize the profit.  
+
+|      |vlg 1|vlg 2|vlg 3|vlg 4|vlg 5|vlg 6|vlg 7|vlg 8|
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|**vlg 1**|`2 0 0`|`5 0 0`|`10 1 0`|`11 -3 1`|`12 -2 2`|`16 -2 2`|`19 -1 2`|`26 -2 3`|
+|**vlg 2**|`0 0 0`|`3 0 0`|`8 -1 0`|`9 -5 0`|`10 -4 1`|`14 -2 1`|`17 -3 1`|`24 -6 2`|
+|**vlg 3**|`0 0 0`|`0 0 0`|`5 0 0`|`6 -3 0`|`7 -1 1`|`11 0 1`|`14 0 1`|`21 -3 2`|
+|**vlg 4**|`0 0 0`|`0 0 0`|`0 0 0`|`1 0 0`|`2 1 0`|`6 0 1`|`9 -2 1`|`16 -3 2`|
+|**vlg 5**|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`1 0 0`|`5 -2 0`|`8 -3 0`|`15 -3 1`|
+|**vlg 6**|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`4 0 0`|`7 0 0`|`14 1 0`|
+|**vlg 7**|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`3 0 0`|`10 -3 0`|
+|**vlg 8**|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`7 0 0`|
+
 
 #### Compiling and testing
 
