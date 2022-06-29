@@ -57,6 +57,7 @@ village_t **get_compute_matrix(int *vlgs, int nVlgs, int tPrice, int wPrice)
         ret[i][i].potential = 0;
     }
 
+    /* iterativaly by diagonals filling other fields of the table */
     for (int i = 1; i < nVlgs; i++) {
         for (int j = 0; j < nVlgs - i; j++) {
             get_max_value(ret, j, i + j, tPrice, wPrice);
@@ -72,10 +73,13 @@ void get_max_value(village_t **cMatrix, int row, int col, int tPrice,
     int tmpPrice, tmpPotential;
 
     int numberOfWarriors;
+    /* for initialization of the result */
     bool undefined = true;
 
     for (int i = 0; i < col - row; i++) {
 
+        /* creating merge combination of villages to get that on row 'row' and
+         * column 'col */
         village_t vlg1 = cMatrix[row][col - i - 1];
         village_t vlg2 = cMatrix[col - i][col];
 
@@ -107,17 +111,11 @@ void get_max_value(village_t **cMatrix, int row, int col, int tPrice,
 
 void print_compute_matrix(village_t **cMatrix, int nVlgs)
 {
-    // for (int i = 0; i < nVlgs; i++) {
-    //     for (int j = 0; j < nVlgs; j++) {
-    //         cout << "[" << setw(3) << cMatrix[i][j].numberOfWarriors << ", "
-    //              << setw(3) << cMatrix[i][j].price << ", " << setw(3)
-    //              << cMatrix[i][j].potential << "]  ";
-    //     }
-    //     cout << "\n";
-    // }
     for (int i = 0; i < nVlgs; i++) {
         for (int j = 0; j < nVlgs; j++) {
-            cout << "|`" << cMatrix[i][j].numberOfWarriors << " " << cMatrix[i][j].price << " " << cMatrix[i][j].potential << "`";
+            cout << "[" << setw(3) << cMatrix[i][j].numberOfWarriors << ", "
+                 << setw(3) << cMatrix[i][j].price << ", " << setw(3)
+                 << cMatrix[i][j].potential << "]  ";
         }
         cout << "\n";
     }
