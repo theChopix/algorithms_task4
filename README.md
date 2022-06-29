@@ -16,7 +16,7 @@ The numbers of warriors in each village along the river are given, as well as th
 
 #### Input (example)
 
-`8 1 1` <sub> number of villages & amount for which the totem can be sold & amount the natives demand for each difference fighter when selling totems </sub>
+`8 1 1` <sub> number of villages & amount for which the totem can be sold & amount the natives demand for each difference fighter when selling totems </sub>  
 `2 3 4 1 1 4 3 7` <sub> numbers representing number of fighters in each village (given in the order that corresponds to the order of the villages along the river </sub>
 
 #### Output (example)
@@ -24,6 +24,8 @@ The numbers of warriors in each village along the river are given, as well as th
 `3` <sub> maximal possible profit Mr. Henson can obtain by buying and then selling totems </sub>
 
 ## Solution
+
+In order to obtain time complexity of the program as small as possible (which was the main goal of these tasks) it is needed to solve this problem as a task of dynamic programming. This task is kind of similar to optimization problem of [matrix chain multiplication](https://en.wikipedia.org/wiki/Matrix_chain_multiplication) (matrix chain ordering problem). It leads us to make the table of individual elements (villages and number of their warriors in this task) together with any possible combination of the elements (merger of villages). Based on this table, bearing information on possible gains in merging villages or keeping them separeted, we can decide which mergers we have to make to maximize the profit. 
 
 #### Compiling and testing
 
