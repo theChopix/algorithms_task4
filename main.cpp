@@ -35,6 +35,8 @@ int main()
                   computeMatrix[0][ARRAyOFFSET(numberOfVillages)].potential);
     cout << res << "\n";
 
+    print_compute_matrix(computeMatrix, numberOfVillages);
+
     for (int i = 0; i < numberOfVillages; i++) {
         delete computeMatrix[i];
     }
@@ -48,7 +50,7 @@ village_t **get_compute_matrix(int *vlgs, int nVlgs, int tPrice, int wPrice)
         ret[i] = new village_t[nVlgs];
     }
 
-    /* atfirst filling on the main diagonale */
+    /* atfirst filling the main diagonale */
     for (int i = 0; i < nVlgs; i++) {
         ret[i][i].numberOfWarriors = vlgs[i];
         ret[i][i].price = 0;
@@ -105,11 +107,17 @@ void get_max_value(village_t **cMatrix, int row, int col, int tPrice,
 
 void print_compute_matrix(village_t **cMatrix, int nVlgs)
 {
+    // for (int i = 0; i < nVlgs; i++) {
+    //     for (int j = 0; j < nVlgs; j++) {
+    //         cout << "[" << setw(3) << cMatrix[i][j].numberOfWarriors << ", "
+    //              << setw(3) << cMatrix[i][j].price << ", " << setw(3)
+    //              << cMatrix[i][j].potential << "]  ";
+    //     }
+    //     cout << "\n";
+    // }
     for (int i = 0; i < nVlgs; i++) {
         for (int j = 0; j < nVlgs; j++) {
-            cout << "[" << setw(3) << cMatrix[i][j].numberOfWarriors << ", "
-                 << setw(3) << cMatrix[i][j].price << ", " << setw(3)
-                 << cMatrix[i][j].potential << "]  ";
+            cout << "|`" << cMatrix[i][j].numberOfWarriors << " " << cMatrix[i][j].price << " " << cMatrix[i][j].potential << "`";
         }
         cout << "\n";
     }
