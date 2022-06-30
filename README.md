@@ -1,7 +1,5 @@
 ## Task
 
-### *Field = table*
-
 #### Buying totems in the African rainforest
 
 Traveler Matthew Henson visits and indigenous tribe in the African rainforest. The tribes live in huts along the long river. Several huts form village, with each of the two neighboring ***villages separated by a totem*** pole built by ancient ancestors. The totems are unique and Mr. Henson is interested in buying them. He is convinced that ***each of them will sell to private collections for the price P***.  
@@ -40,9 +38,9 @@ In order to obtain time complexity of the program as small as possible (which wa
 |**vlg 7**|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`3 0 0`|`10 -3 0`|
 |**vlg 8**|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`0 0 0`|`7 0 0`|
 
-The fields in the table (which is for the given example above) consist of three numbers `w m p`. `w` in in the row `r` and column `c` stands for number of warriors in village made by merging villages `r` to `c`. `m` stands for maximal profit after merging villages `r` to `c`. And because some trades might be in terms of profit inefficient and in these cases it is better to leave the villages separated `p` stands for maximal profit we can get by combination of merging (some of) villages `r` to `c` and keeping (some of) them separated.  
+The cells in the table (which is for the given example above) consist of three numbers `w m p`. `w` in in the row `r` and column `c` stands for number of warriors in village made by merging villages `r` to `c`. `m` stands for maximal profit after merging villages `r` to `c`. And because some trades might be in terms of profit inefficient and in these cases it is better to leave the villages separated `p` stands for maximal profit we can get by combination of merging (some of) villages `r` to `c` and keeping (some of) them separated.  
 
-After initial filling the main diagonal fields we can iteratively (by diagonals) get ourselves to field in the right upper corner where the second number stands for maximal profit which is made by sequentally merging all villages into one and the third stands for maximal profit made by keeping some of them separated. The result (maximal possible profit) is maximum of these values.
+After initial filling the main diagonal cells we can iteratively (by diagonals) get ourselves to cell in the right upper corner where the second number stands for maximal profit which is made by sequentally merging all villages into one and the third stands for maximal profit made by keeping some of them separated. The result (maximal possible profit) is maximum of these values.
 
 #### Compiling and testing
 
