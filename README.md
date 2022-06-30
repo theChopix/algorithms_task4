@@ -1,5 +1,7 @@
 ## Task
 
+### *Field = table*
+
 #### Buying totems in the African rainforest
 
 Traveler Matthew Henson visits and indigenous tribe in the African rainforest. The tribes live in huts along the long river. Several huts form village, with each of the two neighboring ***villages separated by a totem*** pole built by ancient ancestors. The totems are unique and Mr. Henson is interested in buying them. He is convinced that ***each of them will sell to private collections for the price P***.  
